@@ -1,8 +1,11 @@
 package com.example.user.odaiaoc2019;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -14,60 +17,38 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class ProfileActivity extends AppCompatActivity {
-    private static final int PERMISSION_CODE =1000 ;
-    Button mCaptureBtn;
-    ImageView mImageView;
-    Uri imageUri;
+    private static final int CAMERA_PIC_REQUEST = 0;
+
+    private static final int CAMERA_REQUEST = 0;
+    Button buttonCam;
+    ImageView imageViewA;
+    Bitmap bitmap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        mImageView = findViewById(R.id.image_view);
-        mCaptureBtn = findViewById(R.id.capture_image_btn);
+        buttonCam = findViewById(R.id.buttonCam);
+        buttonCam.setOnClickListener(this);
 
-        mCaptureBtn.setOnClickListener(new View.OnClickListener()  {
-        @Override
-        public void onClick(View v) {
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                if(checkSelfPermission(Manifest.permission.CAMERA) ==
-                 PackageManager.PERMISSION_DENIED | |
-                 checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)==
-                 PackageManager.PERMISSION_DENIED) {
-               String[] permission = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                requestPermissions(permission, PERMISSION_CODE);
+    }
 
-                 }
-                 else {
-                    openCamera();
-                }
-                 else{
-                    openCamera();
-                 }
+    public void onClick(View view) {
+        if(view == buttonCam){
+            Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(i, CAMERA_REQUEST);
+        }else{
+        }
+    }
 
-    private void openCamera() {
-                    ContentValues values= new ContentValues();
-                    values.put(MediaStore.Images.Media.TITLE,"New Picture");
-                    values.put(MediaStore.Images.Media.DESCRIPTION,"From The Camera");
-                    imageUri=getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-                    Intent cameraIntent= new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-                    startActivityForResult(cameraIntent, IMAGE_CAPTURE_CODE);
 
-                }
-                @Override
-                public void onRequestPermissionsResult(int requestCode,@NonNull String[] permissions, @NonNull int);
-                switch (requestCode){
-                    case PERMISSION_CODE:{
-                        if (grantResults.length > 0 && grantResults[0]==
-                                PackageManager.PERMISSION_GRANTED){
-                            openCamera();
-                        }
-                        else{
-                            Toast.makeText(this,"permission denied", Toast.LENGTH_SHORT).show();
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-                        }
-                        }
-                        }
-                    }
-            }
+        if ((requestCode == CAMERA_REQUEST) &
+                (resultCode == Activity.RESULT_OK)){
+            bitmap = (Bitmap) data.getExtras().get( "data");
+            imageViewA.setImageBitmap(bitmap);
+        }
+    }
+}

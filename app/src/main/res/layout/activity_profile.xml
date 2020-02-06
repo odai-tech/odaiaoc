@@ -22,11 +22,12 @@
                android:src="@drawable/ic_image_black_24dp"
                android:layout_width="50dp"
                android:layout_height="50dp" />
+
             <Button
                 android:id="@+id/capture_image_btn"
-                android:text="captture Image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="captture Image" />
 
             <TextView
                 android:id="@+id/textView"
