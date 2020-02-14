@@ -1,4 +1,4 @@
-package com.example.user.odaiaoc2019;
+package com.example.user.odaiaoc2019.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.user.odaiaoc2019.R;
+import com.example.user.odaiaoc2019.activity.MainActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 

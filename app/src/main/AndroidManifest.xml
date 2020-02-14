@@ -16,21 +16,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomePage" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".ListActivity" />
-        <activity android:name=".BloodDonationActivity" />
-        <activity android:name=".HospitalUI" />
-        <activity android:name=".PatientList" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activity.HomePage" />
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.ProfileActivity" />
+        <activity android:name=".activity.ListActivity" />
+        <activity android:name=".activity.BloodDonationActivity" />
+        <activity android:name=".activity.HospitalUI" />
+        <activity android:name=".activity.PatientList" />
+        <activity android:name=".activity.MainActivity"></activity>
 
     </application>
 

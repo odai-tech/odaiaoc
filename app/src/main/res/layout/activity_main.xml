@@ -8,7 +8,7 @@
     android:layout_gravity="center|center_vertical"
     android:gravity="center|center_vertical"
     android:background="#000000 "
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
 
 

@@ -1,13 +1,15 @@
-package com.example.user.odaiaoc2019;
+package com.example.user.odaiaoc2019.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ListActivity extends AppCompatActivity {
+import com.example.user.odaiaoc2019.R;
+
+public class PatientList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_patient_list);
     }
 }

@@ -1,4 +1,6 @@
-package com.example.user.odaiaoc2019;
+package com.example.user.odaiaoc2019.model;
+
+import com.example.user.odaiaoc2019.model.BloodDonation;
 
 import java.util.ArrayList;
 

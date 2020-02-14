@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFF"
     android:orientation="vertical"
-    tools:context=".PatientList">
+    tools:context=".activity.PatientList">
 
     <TextView
         android:id="@+id/textView8"

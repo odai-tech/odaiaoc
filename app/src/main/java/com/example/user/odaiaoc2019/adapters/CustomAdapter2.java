@@ -1,19 +1,17 @@
-package com.example.user.odaiaoc2019;
+package com.example.user.odaiaoc2019.adapters;
 
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.user.odaiaoc2019.R;
+import com.example.user.odaiaoc2019.model.BloodDonation;
+
 import java.util.List;
 
 /**

@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".activity.ProfileActivity">
 
 
 
-    bnjkbjk
 
-
-    
     <LinearLayout
         android:layout_width="368dp"
         android:layout_height="524dp"
@@ -30,7 +27,7 @@
                android:layout_height="50dp" />
 
             <Button
-                android:id="@+id/capture_image_btn"
+                android:id="@+id/buttonCam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="captture Image" />

@@ -1,4 +1,4 @@
-package com.example.user.odaiaoc2019;
+package com.example.user.odaiaoc2019.activity;
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -16,7 +16,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class ProfileActivity extends AppCompatActivity {
+import com.example.user.odaiaoc2019.R;
+
+public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
     private static final int CAMERA_PIC_REQUEST = 0;
 
     private static final int CAMERA_REQUEST = 0;

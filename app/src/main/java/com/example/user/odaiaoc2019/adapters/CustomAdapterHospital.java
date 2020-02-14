@@ -1,4 +1,4 @@
-package com.example.user.odaiaoc2019;
+package com.example.user.odaiaoc2019.adapters;
 
 
 import android.content.Context;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.user.odaiaoc2019.R;
+import com.example.user.odaiaoc2019.model.Hospital;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.user.odaiaoc2019;
+package com.example.user.odaiaoc2019.model;
 
 public class BloodDonation {
     private int age;
